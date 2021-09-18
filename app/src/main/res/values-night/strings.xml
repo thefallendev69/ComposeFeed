@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_retry">Retry</string>
+    <string name="app_no_network_error">No Internet Connection Detected!!.</string>
+    <string name="app_generic_error">Oops Something went wrong. Sorry for the inconvenience!!.</string>
+
+</resources>
