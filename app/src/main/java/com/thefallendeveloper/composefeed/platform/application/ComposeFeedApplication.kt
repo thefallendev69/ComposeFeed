@@ -1,6 +1,7 @@
 package com.thefallendeveloper.composefeed.platform.application
 
 import android.app.Application
+import android.util.Log
 import com.thefallendeveloper.composefeed.network.INetworkService
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
@@ -12,6 +13,7 @@ private lateinit var _instance: ComposeFeedApplication
 class ComposeFeedApplication : Application() {
 
     companion object {
+        const val TAG = "ComposeFeedApplication"
         val Instance: ComposeFeedApplication
             get() = _instance
     }
@@ -23,6 +25,7 @@ class ComposeFeedApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         _instance = this
+        Log.d(TAG, networkService.toString())
     }
 
 }

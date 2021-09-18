@@ -11,15 +11,21 @@ import java.lang.Exception
 import java.net.URI
 import java.net.URL
 import javax.inject.Inject
+import javax.inject.Singleton
 
 private const val CONST_QUERY_PARAM_PAGE = "page"
 
 class GetFeedsUseCase @Inject constructor(
+    @Singleton
     dataSource: INetworkService,
 ) : BaseUseCase<GetFeedsUseCase.Parameters, PostFeedModel, PostFeedUIModel>(dataSource) {
 
     companion object {
         const val TAG = "GetFeedsUseCase"
+    }
+
+    init {
+        Log.d(TAG, dataSource.toString())
     }
 
     data class Parameters(
